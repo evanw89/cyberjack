@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Libre+Barcode+39+Text|Poiret+One|Roboto+Slab|Unica+One');
+
+
+* {
+	transition: 0.3s ease;
+	font-weight: 300;
+	line-height: 1.2;
+	/*font-family: 'Roboto Slab', serif;*/
+	/*font-family: 'Poiret One', cursive;*/
+	font-family: 'Unica One', cursive;
+	/*font-family: 'Advent Pro', sans-serif;*/
+}
+.logo {
+	width: 50px;
+	height: 56px;
+	object-fit: cover;
+	object-position: top center;
+	opacity: 0.8;
+}
+.title, .title span, .team h1, .navbar-brand {
+	font-family: 'Poiret One', cursive;
+}
+header {
+	min-height: 100vh;
+	overflow: hidden;
+}
+header div:nth-child(2) {
+	height: 100vh; 
+}
+.games {
+	min-height: 70vh;
+
+}
+.spaceRace, .diagnosis {
+	min-height: 40vh;
+}
+.spaceRace {
+	background-image: url("../images/spacelane-banner.jpg");
+	background-size: cover;
+	background-position: center right;
+}
+.diagnosis {
+	background-image: url("../images/diagnosis-confidential.jpg");
+	background-size: cover;
+	background-position: center left;
+}
+.spaceRace h1 {
+	white-space: nowrap;
+}
+.spaceRace .overlay {
+	mix-blend-mode: color-dodge;
+	background-color: #0062c7;
+	opacity: 0.75;
+}
+.diagnosis .overlay {
+	mix-blend-mode: color-dodge;
+	background-color: tomato;
+	opacity: 0.75;
+}
+.diagnosis {
+	background-color: #ff9582;
+}
+.blockquote p.display-4 {
+	font-size: 2.25rem;
+}
+.overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	mix-blend-mode: color;
+	top: 0;
+	left: 0;
+	transform-origin: bottom;
+	transition: 0.5s ease;
+}
+.portrait:hover .overlay {
+	transform: scaleY(0);
+}
+.footer {
+	min-height: 30vh;
+	position: relative;
+	top: 4vh;
+}
+.title {
+	position: relative;
+	z-index: 1;
+}
+.title:before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 85px;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    background-color: #17a2b8;
+    transition: width 0.3s ease-in-out;
+}
+.title:after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: 4px;
+    width: 300%;
+    height: 3px;
+    right: 0;
+    background-color: tomato;
+    transition: width 0.3s ease-in-out 0.15s;
+}
+.title:hover:before {
+    width: 100%;
+    transition: width 0.3s ease-in-out 0.15s;
+}
+.title:hover:after {
+    width: 0;
+    right: 0;
+    transition: width 0.3s ease-in-out;
+}
+.title2 {
+	color: #17a2b8;
+	font-size: 1.5rem;
+	position: relative;
+	z-index: 1;
+}
+.title:hover ~ .title2 {
+	color: tomato;
+}
+.socialLinks i {
+	font-size: 1.75rem;
+}
+.team h1:after {
+    content: '';
+    display: block;
+    position: relative;
+    transform: rotate(90deg);
+    width: 200%;
+    height: 3px;
+    right: -40px;
+    top: -20px;
+    background-color: #17a2b8;
+    transition: 0.3s ease-in-out;
+}
+.team h1:hover:after {
+    background-color: tomato;
+}
+.circleTitle {
+	position: absolute;
+	top: 20%;
+	right: -10%;
+	height: 800px;
+	width: 800px;
+	z-index: 0;
+	opacity: 0.3;
+	background-color: #17a2b8;
+	border-radius: 50%;
+	mix-blend-mode: color-burn;
+}
+.circleTitle2 {
+	position: absolute;
+	top: 30%;
+	right: 40%;
+	height: 300px;
+	width: 300px;
+	z-index: 0;
+	opacity: 0.3;
+	background-color: #17a2b8;
+	border-radius: 50%;
+	mix-blend-mode: color-burn;
+}
+.title:hover ~ .circleTitle, .title:hover ~ .circleTitle2 {
+	opacity: 0.6;
+	background-color: tomato;
+}
+.title:hover span {
+	color: tomato!important;
+}
+.footer li {
+	border-radius: 20px;
+}
+.footer li:hover, nav li:hover {
+	background-color: #f8f9fa;
+}
+.footer li:hover a, nav li:hover a {
+	color: #343a40!important;
+}
